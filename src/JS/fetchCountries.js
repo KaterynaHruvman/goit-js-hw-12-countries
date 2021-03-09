@@ -8,3 +8,5 @@ return fetch(baseUrl + `name/${queryCounrty}`)
 }
 
 export default fetchCountries;
+fetchCountries();
+console.log(fetchCountries)
