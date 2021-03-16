@@ -7,13 +7,13 @@ import { error, alert} from '@pnotify/core';
 defaults.styling = 'angeler';
 defaults.icons = 'angeler';
 
-function errorFetch() {
-  error({
-    title: 'Oh No!',
-    text: `Such country doesn't exist`,
-    delay: 1000,
-  });
-}
+// function errorFetch() {
+//   error({
+//     title: 'Oh No!',
+//     text: `Such country doesn't exist`,
+//     delay: 1000,
+//   });
+// }
 
 function errorQuerySpecific() {
   error({
@@ -30,12 +30,12 @@ function successQuery() {
   });
 }
 
-function successQueryList() {
-  alert({
-    title: 'Success',
-    text: `Here are countries matching on your request`,
-    delay: 1000,
-  });
-}
+// function successQueryList() {
+//   alert({
+//     title: 'Success',
+//     text: `Here are countries matching on your request`,
+//     delay: 1000,
+//   });
+// }
 
-export { errorFetch, errorQuerySpecific, successQuery, successQueryList };
+export {  errorQuerySpecific, successQuery };
