@@ -1,12 +1,20 @@
 
-function fetchCountries(queryCounrty) {
-  const baseUrl = 'https://restcountries.eu/rest/v2/';
+import PNotify from '../../node_modules/pnotify/dist/es/PNotify.js';
+const baseUrl = 'https://restcountries.eu/rest/v2/name/';
 
-return fetch(baseUrl + `name/${queryCounrty}`)
-  .then(res => res.json())
-  .catch(err => err);
-}
+export default {
+  fetchCountries(searchQuery) {
+    const requestParams = searchQuery;
 
-export default fetchCountries;
-fetchCountries();
-console.log(fetchCountries)
+    return fetch(baseUrl + requestParams).then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(
+        PNotify.error({
+          text: '404 Not found1',
+        }),
+      );
+    });
+  },
+};
