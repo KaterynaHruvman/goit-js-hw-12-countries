@@ -1,20 +1,11 @@
 
-import PNotify from '../../node_modules/pnotify/dist/es/PNotify.js';
-const baseUrl = 'https://restcountries.eu/rest/v2/name/';
+import { errorFetch } from './notification.js';
 
-export default {
-  fetchCountries(searchQuery) {
-    const requestParams = searchQuery;
-
-    return fetch(baseUrl + requestParams).then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      return Promise.reject(
-        PNotify.error({
-          text: '404 Not found1',
-        }),
-      );
-    });
-  },
-};
+function fetchCountry(searchQuery) {
+  const url = `https://restcountries.eu/rest/v2/name/${searchQuery}`;
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => data)
+    .catch(() => errorFetch());
+}
+export default fetchCountry;
