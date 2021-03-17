@@ -7,13 +7,13 @@ import { error, alert} from '@pnotify/core';
 defaults.styling = 'angeler';
 defaults.icons = 'angeler';
 
-// function errorFetch() {
-//   error({
-//     title: 'Oh No!',
-//     text: `Such country doesn't exist`,
-//     delay: 1000,
-//   });
-// }
+function errorFetch() {
+  error({
+    title: 'Oh No!',
+    text: `Such country doesn't exist`,
+    delay: 1000,
+  });
+}
 
 function errorQuerySpecific() {
   error({
@@ -22,13 +22,13 @@ function errorQuerySpecific() {
     delay: 1000,
   });
 }
-function successQuery() {
-  alert({
-    title: 'Success',
-    // text: `Such country doesn't exist`,
-    delay: 1000,
-  });
-}
+// function successQuery() {
+//   alert({
+//     title: 'Success',
+//     // text: `Such country doesn't exist`,
+//     delay: 1000,
+//   });
+// }
 
 // function successQueryList() {
 //   alert({
@@ -38,4 +38,4 @@ function successQuery() {
 //   });
 // }
 
-export {  errorQuerySpecific, successQuery };
+export {errorFetch,  errorQuerySpecific };

@@ -1,7 +1,7 @@
-import refs from '../js/refs.js';
+import refs from '../JS/refs.js';
 import countriesList from '../templates/countries-list.hbs';
 import oneCountry from '../templates/one-country.hbs';
-import { errorQuerySpecific,successQuery } from './notification.js';
+import {errorFetch,  errorQuerySpecific  } from './notification.js';
 
 function updateMarkup(data) {
   if (data.length === 1) {
