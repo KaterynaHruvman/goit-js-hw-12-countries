@@ -6,12 +6,10 @@ import {errorFetch,  errorQuerySpecific  } from './notification.js';
 function updateMarkup(data) {
   if (data.length === 1) {
     MarkupOne(data);
-    successQuery();
     return;
   }
   if (data.length > 2 && data.length <= 10) {
     MarkupList(data);
-    successQueryList();
     return;
   }
   if (data.length > 10) {

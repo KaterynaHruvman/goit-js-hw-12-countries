@@ -10,5 +10,5 @@ refs.input.addEventListener(
     const searchQuery = event.target.value;
     refs.container.innerHTML = '';
     fetchCountry(searchQuery).then(updateMarkup);
-  }, 500),
+  }, 5000),
 );
