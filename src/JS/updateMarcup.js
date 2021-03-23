@@ -8,8 +8,10 @@ function updateMarkup(data) {
     MarkupOne(data);
     return;
   }
-  if (data.length > 2 && data.length <= 10) {
+    
+   if (data.length > 2 && data.length <= 10) {
     MarkupList(data);
+    successQueryList();
     return;
   }
   if (data.length > 10) {
@@ -19,14 +21,15 @@ function updateMarkup(data) {
     errorFetch();
     return;
   }
-}
-function MarkupOne(data) {
-  const markup = oneCountry(data);
-  refs.container.insertAdjacentHTML('beforeend', markup);
-}
-function MarkupList(data) {
-  const markup = countriesList(data);
-  refs.container.insertAdjacentHTML('beforeend', markup);
+
+  function MarkupOne(data) {
+    const markup = oneCountry(data);
+    refs.container.insertAdjacentHTML('beforeend', markup);
+  }
+  function MarkupList(data) {
+    const markup = countriesList(data);
+    refs.container.insertAdjacentHTML('beforeend', markup);
+  }
 }
 
 export default updateMarkup;

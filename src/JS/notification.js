@@ -22,20 +22,5 @@ function errorQuerySpecific() {
     delay: 1000,
   });
 }
-// function successQuery() {
-//   alert({
-//     title: 'Success',
-//     // text: `Such country doesn't exist`,
-//     delay: 1000,
-//   });
-// }
-
-// function successQueryList() {
-//   alert({
-//     title: 'Success',
-//     text: `Here are countries matching on your request`,
-//     delay: 1000,
-//   });
-// }
 
 export {errorFetch,  errorQuerySpecific };
