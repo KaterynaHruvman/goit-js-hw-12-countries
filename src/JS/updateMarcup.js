@@ -9,7 +9,7 @@ function updateMarkup(data) {
     return;
   }
     
-   if (data.length > 2 && data.length <= 10) {
+   if (data.length >= 2 && data.length <= 10) {
     MarkupList(data);
     successQueryList();
     return;
